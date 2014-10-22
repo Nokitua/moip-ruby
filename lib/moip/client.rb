@@ -49,6 +49,7 @@ module MoIP
       # Consulta dos dados das autorizações e pagamentos associados à Instrução
       def query(token)
         full_data = peform_action!(:get, "ConsultarInstrucao/#{token}")
+        puts full_data
         get_response!(full_data["ConsultarTokenResponse"]["RespostaConsultar"])
       end
 
